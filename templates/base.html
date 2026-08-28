@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ title or "Music API" }}
+    </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: #f5f7fb;
+            color: #171923;
+        }
+
+        nav {
+            background: #111827;
+            color: white;
+
+            padding: 18px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .logo {
+            color: white;
+            text-decoration: none;
+
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav div a {
+            color: white;
+            text-decoration: none;
+
+            font-size: 14px;
+        }
+
+        .container {
+            max-width: 900px;
+
+            margin: 55px auto;
+
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+
+            padding: 38px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 30px
+                rgba(0, 0, 0, 0.07);
+        }
+
+        h1 {
+            margin-top: 0;
+
+            font-size: 38px;
+        }
+
+        h2 {
+            margin-top: 32px;
+        }
+
+        p,
+        li {
+            color: #4b5563;
+
+            line-height: 1.7;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            padding: 13px 22px;
+
+            background: #111827;
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+
+            padding: 35px 15px;
+
+            color: #6b7280;
+
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #4b5563;
+
+            margin: 0 8px;
+        }
+
+        @media (max-width: 650px) {
+
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .container {
+                margin-top: 30px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<nav>
+
+    <a
+        class="logo"
+        href="/"
+    >
+        Music API
+    </a>
+
+
+    <div>
+
+        <a href="/">
+            Home
+        </a>
+
+        <a href="/privacy-policy">
+            Privacy
+        </a>
+
+        <a href="/terms">
+            Terms
+        </a>
+
+        <a href="/refund-cancellation">
+            Refund
+        </a>
+
+        <a href="/contact-us">
+            Contact
+        </a>
+
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+
+
+<footer>
+
+    © 2026 Music API
+
+    <br><br>
+
+    <a href="/privacy-policy">
+        Privacy Policy
+    </a>
+
+    <a href="/terms">
+        Terms
+    </a>
+
+    <a href="/refund-cancellation">
+        Refund & Cancellation
+    </a>
+
+    <a href="/contact-us">
+        Contact Us
+    </a>
+
+</footer>
+
+
+</body>
+
+</html>
