@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="card">
+
+    <h1>
+        Contact Us
+    </h1>
+
+
+    <p>
+        For support regarding
+        API access, subscriptions,
+        payments or technical issues,
+        contact us using the details
+        below.
+    </p>
+
+
+    <p>
+        <b>Email:</b>
+        {{ email }}
+    </p>
+
+
+    <p>
+
+        <b>Telegram Support:</b>
+
+        <a
+            href="{{ telegram }}"
+            target="_blank"
+        >
+            Contact Support
+        </a>
+
+    </p>
+
+
+    <p>
+        When contacting support about
+        a payment, provide the relevant
+        transaction/reference ID.
+    </p>
+
+
+    <p>
+        Never send your UPI PIN,
+        password or other secret
+        credentials.
+    </p>
+
+</div>
+
+{% endblock %}
